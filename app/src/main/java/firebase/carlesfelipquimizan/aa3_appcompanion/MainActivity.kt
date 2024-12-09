@@ -19,29 +19,16 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             AA3_AppCompanionTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                //Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                var emailField = findViewById(R.id.input_email)
+                var passwordField = findViewById(R.id.input_password)
+                findViewById<Button>(R.Id.register_button).setOnClickListener{Register}
+            }
+
+
+
             }
         }
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    AA3_AppCompanionTheme {
-        Greeting("Android")
-    }
-}
