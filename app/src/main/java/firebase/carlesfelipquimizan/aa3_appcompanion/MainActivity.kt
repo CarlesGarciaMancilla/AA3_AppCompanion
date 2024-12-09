@@ -24,11 +24,8 @@ class MainActivity : ComponentActivity() {
                 var passwordField = findViewById(R.id.input_password)
                 findViewById<Button>(R.Id.register_button).setOnClickListener{Register}
             }
-
-
-
-            }
         }
     }
+}
 
 
